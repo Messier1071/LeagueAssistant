@@ -5,18 +5,18 @@ import HttpRequest from "./request.js";
 // const cors = require("cors");
 // const fs = require("fs");
 
-function test(some){
-  activePlayer = some;
-  console.log(activePlayer.currentGold)
-}
-
-var activePlayer;
-var allPlayers
 
 
-  HttpRequest("https://127.0.0.1:2999/liveclientdata/activeplayer",test)
 
-    console.log(activePlayer);
+
+  HttpRequest("http://localhost:8080/download/buffer_single.json",(user)=>{
+    console.log(user)
+
+    
+
+  })
+
+
   
 
 

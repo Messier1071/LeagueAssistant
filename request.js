@@ -1,10 +1,10 @@
 import { response } from "express";
-import https from "https"
+import http from "http"
 
 export default function HttpRequest(url,callback){
   
-  process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
-    https.get(url, res => {
+
+    http.get(url, res => {
   let data = [];
   const headerDate = res.headers && res.headers.date ? res.headers.date : 'no response date';
   console.log('Status Code:', res.statusCode);
@@ -17,7 +17,7 @@ export default function HttpRequest(url,callback){
   res.on('end', () => {
     console.log('Response ended: ');
     var user = JSON.parse(Buffer.concat(data).toString());
-    
+    //console.log(user);
 
     callback(user);
   });
