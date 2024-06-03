@@ -9,15 +9,15 @@ import HttpRequest from "./request.js";
 
 
 
-  HttpRequest("http://localhost:8080/download/buffer_single.json",(user)=>{
-    console.log(user)
-
-    
-
-  })
+HttpRequest("http://localhost:8080/download/buffer_single.json", (user) => {
+  console.log(user)
 
 
-  
+
+})
+
+
+
 
 
 
